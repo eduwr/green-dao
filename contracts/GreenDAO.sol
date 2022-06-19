@@ -3,6 +3,7 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "hardhat/console.sol";
 
 
 contract GreenDAO is ERC721 {
@@ -15,7 +16,10 @@ contract GreenDAO is ERC721 {
         _;
     }
 
-    constructor() ERC721("GreenDAO", "GREEN") {}
+    constructor() ERC721("GreenDAO", "GREEN") {
+      console.log("Deploying a GreenDAO with `GREEN` symbol.");
+
+    }
 
     function mint(string memory _name) public uniqueName(_name) {
         nameExists[_name] = true;
