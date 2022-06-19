@@ -5,4 +5,4 @@ Green DAO is an iniciative to boost development of environmental friendly projec
 
 # FLOW CHART
 
-[](./public/flow-chart.png)
+![Green DAO Flow Chart](./public/flow-chart.png)
