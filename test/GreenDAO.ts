@@ -19,9 +19,6 @@ describe("GreenDAO", function () {
 
   it("Should be able to mint a token", async () => {
     const [sender] = await ethers.getSigners();
-
-    console.log("balance", await sender.getBalance());
-
     await greenDAO.mint("Eduardo", { from: sender.address });
 
     const owner = await greenDAO.ownerOf("0");
